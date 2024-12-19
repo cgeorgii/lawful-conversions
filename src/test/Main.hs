@@ -1,11 +1,11 @@
 module Main where
 
-import qualified Data.ByteString.Builder as Data.ByteString.Builder
-import qualified Data.ByteString.Lazy as Data.ByteString.Lazy
-import qualified Data.ByteString.Short as Data.ByteString.Short
-import qualified Data.Primitive.ByteArray as Data.Primitive.ByteArray
-import qualified Data.Text.Lazy as Data.Text.Lazy
-import qualified Data.Text.Lazy.Builder as Data.Text.Lazy.Builder
+import qualified Data.ByteString.Builder
+import qualified Data.ByteString.Lazy
+import qualified Data.ByteString.Short
+import qualified Data.Primitive.ByteArray
+import qualified Data.Text.Lazy
+import qualified Data.Text.Lazy.Builder
 import LawfulConversions
 import Rebase.Prelude
 import Test.ExtraInstances ()
@@ -17,7 +17,8 @@ main = defaultMain allTests
 
 allTests :: TestTree
 allTests =
-  testGroup "All" $
+  testGroup
+    "All"
     [ testIs @[Word8] @ByteString Proxy Proxy,
       testIs @[Word8] @Data.ByteString.Lazy.ByteString Proxy Proxy,
       testIs @[Word8] @Data.ByteString.Short.ShortByteString Proxy Proxy,

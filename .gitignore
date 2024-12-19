@@ -1,6 +1,6 @@
 # We apply the Gitignore Whitelist approach here.
 # Everything but a specific list of files and directories listed here gets ignored.
-# 
+#
 # More on the approach: https://jasonstitt.com/gitignore-whitelisting-patterns.
 
 # Ignore everything in the root folder:
@@ -14,6 +14,9 @@
 # Unignore subtrees:
 !/.github/
 !/src/
+
+!/flake.nix
+!/flake.lock
 
 # Ignore noise:
 .DS_Store

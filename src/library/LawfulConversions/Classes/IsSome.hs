@@ -1,3 +1,7 @@
+{-# OPTIONS_GHC -Wno-unrecognised-pragmas #-}
+
+{-# HLINT ignore "Redundant id" #-}
+
 module LawfulConversions.Classes.IsSome where
 
 import LawfulConversions.Prelude
